@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+@layer base {
+  :root {
+    --background: 206 38% 97%;
+    --foreground: 205 56% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 205 56% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 205 56% 11%;
+
+    --primary: 180 83% 30%;
+    --primary-foreground: 0 0% 100%;
+    --primary-soft: 180 50% 94%;
+
+    --secondary: 206 38% 93%;
+    --secondary-foreground: 205 56% 11%;
+
+    --muted: 206 30% 95%;
+    --muted-foreground: 205 20% 38%;
+
+    --accent: 36 100% 64%;
+    --accent-foreground: 205 56% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 206 25% 88%;
+    --input: 206 25% 88%;
+    --ring: 180 83% 30%;
+
+    --radius: 0.875rem;
+
+    --shadow-soft: 0 8px 30px -12px hsl(180 60% 25% / 0.18);
+    --shadow-card: 0 2px 16px -6px hsl(205 40% 30% / 0.08);
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Manrope', system-ui, sans-serif;
+    @apply tracking-tight;
+  }
+}
+
+@layer utilities {
+  .shadow-soft { box-shadow: var(--shadow-soft); }
+  .shadow-card { box-shadow: var(--shadow-card); }
+  .container-x { @apply max-w-6xl mx-auto px-5 md:px-8; }
+}
+
+/* tooth pulse animation */
+@keyframes tooth-pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.85; }
+}
+.animate-tooth { animation: tooth-pulse 2.4s ease-in-out infinite; transform-origin: center; }
+
+@keyframes draw-line {
+  to { stroke-dashoffset: 0; }
+}
+.animate-draw {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: draw-line 2.5s ease-out forwards infinite alternate;
+}
+
+@keyframes step-fill {
+  0%, 20% { fill: hsl(var(--muted)); }
+  30%, 100% { fill: hsl(var(--primary)); }
+}
+.step-1 { animation: step-fill 4s ease-in-out infinite; }
+.step-2 { animation: step-fill 4s ease-in-out infinite; animation-delay: 1s; }
+.step-3 { animation: step-fill 4s ease-in-out infinite; animation-delay: 2s; }
+.step-4 { animation: step-fill 4s ease-in-out infinite; animation-delay: 3s; }
