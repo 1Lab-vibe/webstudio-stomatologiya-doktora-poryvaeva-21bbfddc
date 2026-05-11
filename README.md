@@ -1,2 +1,3 @@
-# webstudio-stomatologiya-doktora-poryvaeva-21bbfddc
-Web Studio landing for Стоматология Доктора Порываева
+# Welcome to your Lovable project
+
+TODO: Document your project here
