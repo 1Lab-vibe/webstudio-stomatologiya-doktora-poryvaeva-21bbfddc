@@ -1,7 +1,7 @@
 {
   "leadId": "21bbfddc-6d9c-4c9b-a68c-ef616e6651ba",
   "businessName": "Стоматология Доктора Порываева",
-  "lovableProjectId": "dd4574b4-1a74-4567-9733-9c1fa49414de",
   "publicUrl": "https://webstudio.1true.ru/projects/stomatologiya-doktora-poryvaeva-21bbfddc/",
-  "publishedToGitHubAt": "2026-05-11T19:32:07.601Z"
+  "fallbackReason": "Lovable create_project did not return project_id",
+  "publishedToGitHubAt": "2026-05-12T13:34:24.531Z"
 }
